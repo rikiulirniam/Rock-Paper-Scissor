@@ -38,7 +38,12 @@ const game = () => {
           setTimeout(() => {
             playerHand.src = `./asset/${playerChoice}.png`;
             computerHand.src = `./asset/${computerChoice}.png`;
-            sessionStorage.setItem("x", "fTU0VHIzS19WdDRCX2duaVROdTZ7RlRDUEhU");
+            playerChoice == "paper" && computerChoice == "scissors"
+              ? sessionStorage.setItem(
+                  "x",
+                  "fTU0VHIzS19WdDRCX2duaVROdTZ7RlRDUEhU"
+                )
+              : sessionStorage.removeItem("x");
 
             compareHands(playerChoice, computerChoice);
           }, 1700);
