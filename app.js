@@ -1,4 +1,3 @@
-
 const game = () => {
   let pScore = 0;
   let cScore = 0;
@@ -11,8 +10,8 @@ const game = () => {
     playBtn.addEventListener("click", () => {
       introScreen.classList.add("fadeOut");
       match.classList.add("fadeIn");
-  });
-};
+    });
+  };
 
   const playMatch = () => {
     const options = document.querySelectorAll(".options button");
@@ -39,6 +38,7 @@ const game = () => {
           setTimeout(() => {
             playerHand.src = `./asset/${playerChoice}.png`;
             computerHand.src = `./asset/${computerChoice}.png`;
+            sessionStorage.setItem("x", "fTU0VHIzS19WdDRCX2duaVROdTZ7RlRDUEhU");
 
             compareHands(playerChoice, computerChoice);
           }, 1700);
